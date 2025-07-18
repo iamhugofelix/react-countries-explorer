@@ -1,25 +1,22 @@
 # 🌍 React Countries Explorer
-
-This is a learning project built with React that fetches and displays data from the [REST Countries API](https://restcountries.com/). It's a simple app that lets users explore country details, filter by region, currency, etc...
+This is a learning project built with **React** and **Vite** that fetches and displays data from the [REST Countries API](https://restcountries.com/). It's a simple app that lets users explore country details, filter by region, and search by name.
 
 ## 🚀 Features
-
-- Fetch data from the REST Countries API
-- List all countries with flag, name, and additional information.
-- Filter countries by region
-- View detailed information about each country
+- 🌍 Filter countries by region
+- 🧭 View detailed country info
+- 🛣️ Routing with React Router
 
 ## 🛠️ Tech Stack
 
-- React (with Hooks)
-- SCSS
-- REST API
+- [React](https://react.dev/)
+- [Vite](https://vitejs.dev/)
+- [React Router](https://reactrouter.com/)
+- [REST Countries API](https://restcountries.com/)
 
 ## 📚 Learning Goals
-
-This project helps practice:
-- Fetching data from an API
-- React state and lifecycle
-- Conditional rendering
-- Basic routing (if you add React Router)
-- Code structure and component reuse
+This project is helping me practice:
+- Using Vite
+- Fetching and displaying data from an external API
+- Managing state and props
+- Setting up routes with React Router
+- Basic component structure and styling

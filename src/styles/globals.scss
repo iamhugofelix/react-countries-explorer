@@ -1,0 +1,106 @@
+/* Colors */
+$white: #ffffff;
+$black:  #0c0a09;
+
+$rock-50:   #fafaf9;
+$rock-100:  #f5f5f4;
+$rock-200:  #e7e5e4;
+$rock-300:  #d6d3d1;
+$rock-400:  #a8a29e;
+$rock-500:  #78716c;
+$rock-600:  #57534e;
+$rock-700:  #44403c;
+$rock-800:  #292524;
+$rock-900:  #1c1917;
+
+$accent-light: #6ee7b7;
+$accent-base: #E35436;
+$accent-dark: #065f46;
+
+/* Typography */
+
+a {
+    text-decoration: none;
+}
+
+/* Input & Selectors */
+.select-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-bottom: 1rem;
+  z-index: -7;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    width: 12px;
+    height: 12px;
+    pointer-events: none;
+    transform: translateY(-50%);
+    background-image: url('data:image/svg+xml;utf8,<svg fill="none" stroke="%23555" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 9l6 6 6-6"/></svg>');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.select {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: 1px solid $rock-200;
+  border-radius: 0.5rem;;
+  outline: none;
+  min-width: 10rem;
+  cursor: pointer;
+  background: white;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: white;
+
+  
+  &:hover {
+    border-color: $rock-300;
+  }
+
+  &:focus {
+    border-color: $rock-300;
+  }
+}
+
+
+/* Page layout*/
+.page-wrapper {
+    padding: 8rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    &--align-center {
+        align-items: center;
+    }
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+
+  @media (min-width: 600px) {
+    grid-template-columns: repeat(2, 1fr); // Tablet
+  }
+
+  @media (min-width: 900px) {
+    grid-template-columns: repeat(3, 1fr); // Small Desktop
+  }
+
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(4, 1fr); // Large Desktop
+  }
+}

@@ -1,19 +1,24 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.scss'
-import './styles/reset.scss';
-import App from './App.jsx'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Homepage from './pages/Homepage.jsx';
 import NotFound from './pages/NotFound.jsx';
+import CurrenciesPage from './pages/CurrenciesPage.jsx';
+import RegionsPage from './pages/RegionsPage.jsx';
+import NavBar from './components/NavBar.jsx';
 
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
+      <NavBar />
       <Routes>
-        <Route path='/' element={<Homepage/>}/>
-        <Rout path='*' element={<NotFound/>}/>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/regions" element={<RegionsPage />} />
+        <Route path="/currencies" element={<CurrenciesPage />} />
+
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
-  </StrictMode>,
-)
+  </StrictMode>
+);

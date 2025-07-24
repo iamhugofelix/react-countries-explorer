@@ -7,6 +7,8 @@ import NotFound from './pages/NotFound.jsx';
 import CurrenciesPage from './pages/CurrenciesPage.jsx';
 import RegionsPage from './pages/RegionsPage.jsx';
 import NavBar from './components/NavBar.jsx';
+import RegionDetailsPage from './pages/RegionsDetailsPage.jsx';
+import CountryDetailPage from './pages/CountryDetailsPage.jsx';
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -14,7 +16,11 @@ createRoot(document.getElementById("root")).render(
       <NavBar />
       <Routes>
         <Route path="/" element={<Homepage />} />
+        <Route path="/country/:name" element={<CountryDetailPage />} />
+
         <Route path="/regions" element={<RegionsPage />} />
+        <Route path="/region/:name" element={<RegionDetailsPage />} />
+
         <Route path="/currencies" element={<CurrenciesPage />} />
 
         <Route path="*" element={<NotFound />} />
